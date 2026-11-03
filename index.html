@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HYMNS Con — Gabapentin Feedback</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page">
+
+  <!-- =========================================================
+       ZOOM / CLICK-TO-ENTER OVERLAY
+       This is what requests Fullscreen. Because everything below
+       lives on this one page, once Fullscreen is granted here it
+       stays active for the rest of the session — nothing after
+       this point ever navigates away from index.html.
+  ========================================================= -->
+  <div id="zoomIntro" class="zoom-intro">
+    <div class="zoom-content">
+      <!-- <img src="logo.png" alt="HYMNS logo"> -->
+      <!-- <h1></h1> -->
+        <!-- <div class="hero-banner">
+          <h1 class="hero-title">15th ACNS</h1>
+          <p class="hero-subtitle">Asian Congress of Neurological Surgeons</p>
+          <hr class="hero-rule">
+          <p class="hero-dates">Date : 30<sup>th</sup> July - 2<sup>nd</sup> August</p>
+          <p class="hero-venue">Venue : St. Regis, Mumbai</p>
+        </div>
+      <p>Welcome to the Feedback Questionnaire</p> -->
+      <button type="button" id="enterBtn" class="enter-btn">Click to Enter</button>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       SCREEN: LANDING
+  ========================================================= -->
+  <section id="screen-landing" class="screen active">
+    <!-- <div class="zoom-overlay" id="zoomOverlay"><img class="zoom-logo" src="logo.png" alt="HYMNS logo"></div> -->
+    <div class="wrap zoom-target">
+      <div class="brand" >
+        <!-- <img src="logo.png" alt="HYMNS logo"> -->
+        <div class="hero-banner">
+          <!-- <h1 class="hero-title">15th ACNS</h1>
+          <p class="hero-subtitle">Asian Congress of Neurological Surgeons</p>
+          <hr class="hero-rule">
+          <p class="hero-dates">Date : 30<sup>th</sup> July - 2<sup>nd</sup> August</p>
+          <p class="hero-venue">Venue : St. Regis, Mumbai</p> -->
+        </div>
+        <!-- <h1 class="brand-title">HYMNS<span>Con</span></h1>
+        <p class="brand-sub">Hyderabad Muscle Nerve and<br>Neuroimmunology Society Conference</p>
+        <p class="brand-meta">Date: July 24 – 26, 2026</p>
+        <p class="brand-meta">Venue: Hotel Taj Deccan, Hyderabad, India</p> -->
+        <button class="hero-button" id="startFormBtn">Gabapentin Feedback<br>Questionnaire</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SCREEN: FORM
+  ========================================================= -->
+  <section id="screen-form" class="screen">
+    <div class="wrap">
+      <div class="progress-wrap">
+        <div class="progress-head">
+          <span id="stepLabel">Step 1 of 6</span>
+          <span>Gabapentin Feedback</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill" style="width:16.67%"></div>
+        </div>
+      </div>
+
+      <div id="stepArea"></div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SCREEN: THANK YOU
+       Shown right after a successful submit. Auto-returns to the
+       landing screen a few seconds later so the next participant
+       can fill the form. The dashboard no longer lives on this
+       page — see dashboard.html, run separately for the TV screen.
+  ========================================================= -->
+  <section id="screen-thankyou" class="screen">
+    <div class="wrap">
+      <div class="thankyou-wrap">
+        <div class="thankyou-check">
+          <svg width="42" height="42" viewBox="0 0 24 24" fill="none">
+            <path d="M20 6L9 17l-5-5" stroke="#ef6b24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h1>Thank you!</h1>
+        <p>Your response has been recorded.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="sponsor-strip"><img src="sponsor-strip.png" alt="Gabapin product sponsors"></div>
+
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
