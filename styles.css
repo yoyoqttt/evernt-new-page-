@@ -19,9 +19,17 @@ body {
 }
 
 body.is-form,
-body.is-dashboard,
 body.is-thankyou {
   background-image: url('dashbg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Dashboard page (dashboard.html) background. */
+body.is-dashboard {
+  background-image: url('background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,7 +39,7 @@ body.is-thankyou {
 body.is-landing {
    background-image: url('dashbg.png'); 
   background-size: cover;
-  background-position: center;
+  background-position: center;1
   background-repeat: no-repeat;
   background-attachment: fixed; */
 } */
@@ -109,6 +117,52 @@ html, body { height: 100%; }
 .thankyou-wrap p{font-size:17px;margin:0;color:#fff;opacity:.92}
 @keyframes thankPop{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
 
+/* ============================================
+   DASHBOARD — fit all chart cards on one screen,
+   no scrolling needed (TV display). Scoped to
+   dashboard.html only (body.is-dashboard), so the
+   kiosk pages (landing/form/thank-you) are untouched.
+   Higher specificity than the .grid media-query rules
+   above, so it wins at any window size.
+============================================ */
+body.is-dashboard { overflow: hidden; }
+body.is-dashboard .page { height: 100vh; padding-bottom: 0; overflow: hidden; }
+body.is-dashboard .dashboard-wrap {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  /* extra bottom padding leaves room for the background image's
+     own logo strip at the bottom, so the cards never cover it */
+  padding: 20px 28px 90px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+body.is-dashboard .dash-top { margin: 0 0 14px; flex-shrink: 0; }
+body.is-dashboard .dash-title h1 { font-size: clamp(20px, 2.2vw, 30px); margin: 2px 0; }
+body.is-dashboard .count-pill { padding: 6px 14px; font-size: 13px; }
+body.is-dashboard .connection-status { font-size: 11px; margin-top: 4px; }
+body.is-dashboard .grid {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 14px;
+}
+body.is-dashboard .chart-card {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  overflow: hidden;
+}
+body.is-dashboard .chart-card h3 { font-size: 13px; margin: 0 0 6px; flex-shrink: 0; }
+body.is-dashboard .chart-box { flex: 1; min-height: 0; position: relative; }
+body.is-dashboard .legend-row { flex-shrink: 0; gap: 4px; margin-top: 8px; }
+body.is-dashboard .legend-item { font-size: 10px; }
+
 .zoom-intro {
     position: fixed;
     inset: 0;
@@ -118,7 +172,7 @@ html, body { height: 100%; }
     justify-content: center;
     align-items: center;
 
-   background-image: url('background.png');  
+   background-image: url('dashbg.png');  
   background-size: cover;                       
   background-position: center;                 
   background-repeat: no-repeat;              
