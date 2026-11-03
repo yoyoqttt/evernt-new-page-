@@ -21,7 +21,7 @@ body {
 body.is-form,
 body.is-dashboard,
 body.is-thankyou {
-  background-image: url('background.png');
+  background-image: url('dashbg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,7 +29,7 @@ body.is-thankyou {
 }
 
 body.is-landing {
-   background-image: url('background.png'); 
+   background-image: url('dashbg.png'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
