@@ -29,7 +29,7 @@ body.is-thankyou {
 
 /* Dashboard page (dashboard.html) background. */
 body.is-dashboard {
-  background-image: url('background.png');
+  background-image: url('dashbg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
