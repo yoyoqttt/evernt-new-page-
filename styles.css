@@ -226,6 +226,7 @@ body.is-dashboard .legend-item { font-size: 10px; }
 .enter-btn {
     border: none;
     padding: 16px 45px;
+    position: relative;
 
     border-radius: 50px;
 
