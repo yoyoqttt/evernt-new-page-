@@ -9,7 +9,7 @@
 }
 
 body {
-    background-image: url('dashbg.png');
+    background-image: url('background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,7 +20,7 @@ body {
 
 body.is-form,
 body.is-thankyou {
-  background-image: url('dashbg.png');
+  background-image: url('background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -37,9 +37,9 @@ body.is-dashboard {
 }
 
 body.is-landing {
-   background-image: url('dashbg.png'); 
+   background-image: url('background.png'); 
   background-size: cover;
-  background-position: center;1
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; */
 } */
@@ -172,7 +172,7 @@ body.is-dashboard .legend-item { font-size: 10px; }
     justify-content: center;
     align-items: center;
 
-   background-image: url('dashbg.png');  
+   background-image: url('background.png');  
   background-size: cover;                       
   background-position: center;                 
   background-repeat: no-repeat;              
