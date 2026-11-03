@@ -39,13 +39,16 @@ QUESTIONS.forEach(q => {
   `;
   grid.appendChild(card);
 
+  const hasOther = q.options.some(o => o.toLowerCase().includes('other'));
   const regular = q.options.filter(o => !o.toLowerCase().includes('other'));
+  const labels = hasOther ? [...regular, 'Other'] : regular;
+
   charts[q.id] = new Chart(document.getElementById(`chart-${q.id}`), {
     type: 'doughnut',
     data: {
-      labels: [...regular, 'Other'],
+      labels,
       datasets: [{
-        data: [...regular.map(() => 0), 0],
+        data: labels.map(() => 0),
         backgroundColor: PALETTE,
         borderWidth: 2,
         borderColor: '#f8fafc'
@@ -62,6 +65,7 @@ onSnapshot(collection(db, COLLECTION_NAME), snap => {
   document.getElementById('responseCount').textContent = snap.size;
 
   QUESTIONS.forEach(q => {
+    const hasOther = q.options.some(o => o.toLowerCase().includes('other'));
     const regular = q.options.filter(o => !o.toLowerCase().includes('other'));
     const counts = {};
     regular.forEach(o => counts[o] = 0);
@@ -83,12 +87,14 @@ onSnapshot(collection(db, COLLECTION_NAME), snap => {
       }
     });
 
-    charts[q.id].data.datasets[0].data = [...regular.map(o => counts[o]), otherCount];
+    const labels = hasOther ? [...regular, 'Other'] : regular;
+    const allCounts = hasOther ? [...regular.map(x => counts[x]), otherCount] : regular.map(x => counts[x]);
+
+    charts[q.id].data.datasets[0].data = allCounts;
     charts[q.id].update();
 
     const legend = document.getElementById(`legend-${q.id}`);
-    const allCounts = [...regular.map(x => counts[x]), otherCount];
-    legend.innerHTML = [...regular, 'Other'].map((o, i) => `
+    legend.innerHTML = labels.map((o, i) => `
       <div class="legend-item">
         <span class="legend-dot" style="background:${PALETTE[i % PALETTE.length]}"></span>
         <span>${esc(o)}</span>
