@@ -260,8 +260,10 @@ body.is-dashboard .legend-item { font-size: 10px; }
         0 15px 35px rgba(0,0,0,.3);
 }
 
-@media (max-width: 1024px) and (min-width: 701px) {
-  .hero-button { margin-top: 16vh; }
+@media (min-width: 540px) and (max-width: 900px) and (orientation: portrait) {
+  .hero-button { margin-top: 10vh; }
+  .brand-sub, .hero-subtitle { font-size: 16px; }
+  .sponsor-strip { height: 80px; }
 }
 
 /* INTRO CLOSE */
