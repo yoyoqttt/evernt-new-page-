@@ -129,11 +129,11 @@ body.is-dashboard { overflow: hidden; }
 body.is-dashboard .page { height: 100vh; padding-bottom: 0; overflow: hidden; }
 body.is-dashboard .dashboard-wrap {
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   margin: 0;
   /* extra bottom padding leaves room for the background image's
      own logo strip at the bottom, so the cards never cover it */
-  padding: 60px 90px 130px;
+  padding: 100px 28px 90px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;

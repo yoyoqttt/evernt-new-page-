@@ -28,11 +28,11 @@ const PALETTE = ['#ef6b24', '#496aa6', '#f5a524', '#62a6ff', '#25c991', '#c43c2f
 const grid = document.getElementById('chartsGrid');
 const charts = {};
 
-QUESTIONS.forEach(q => {
+QUESTIONS.forEach((q, index) => {
   const card = document.createElement('div');
   card.className = 'chart-card';
   card.innerHTML = `
-    <h3>${esc(q.label)}</h3>
+    <h3>Q${index + 1}. ${esc(q.label)}</h3>
     <div class="chart-box"><canvas id="chart-${q.id}"></canvas></div>
     <div class="legend-row" id="legend-${q.id}"></div>
     <div class="other-list" id="other-${q.id}" style="display:none"></div>
