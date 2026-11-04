@@ -29,7 +29,7 @@ body.is-thankyou {
 
 /* Dashboard page (dashboard.html) background. */
 body.is-dashboard {
-  background-image: url('dashbg.png');
+  background-image: url('dash.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -133,7 +133,7 @@ body.is-dashboard .dashboard-wrap {
   margin: 0;
   /* extra bottom padding leaves room for the background image's
      own logo strip at the bottom, so the cards never cover it */
-  padding: 20px 28px 90px;
+  padding: 60px 90px 130px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
