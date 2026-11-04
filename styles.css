@@ -89,7 +89,7 @@ html, body { height: 100%; }
 .hero-rule{width:70%;max-width:720px;margin:12px auto;border:0;border-top:3px solid rgba(255,255,255,0.85)}
 .hero-dates,.hero-venue{font-size:20px;margin:6px 0;color:#fff;font-weight:600;text-shadow:0 3px 12px rgba(0,0,0,.45)}
 .hero-dates sup,.hero-venue sup{font-size:60%;vertical-align:super}
-.hero-button{display:inline-block;margin:18px auto 0;justify-content:center;text-align:center;width:min(520px,88%);border:0;border-radius:60px;background:linear-gradient(135deg,var(--orange2),var(--orange));color:#fff;font-size:20px;font-weight:800;padding:18px 28px;cursor:pointer;box-shadow:0 20px 40px rgba(124,58,20,.28);line-height:1.1;white-space:normal;transition:transform .18s ease,box-shadow .18s ease}
+.hero-button{display:inline-block;margin:18px auto 0;justify-content:center;text-align:margin-top: 16vh;center;width:min(520px,88%);border:0;border-radius:60px;background:linear-gradient(135deg,var(--orange2),var(--orange));color:#fff;font-size:20px;font-weight:800;padding:18px 28px;cursor:pointer;box-shadow:0 20px 40px rgba(124,58,20,.28);line-height:1.1;white-space:normal;transition:transform .18s ease,box-shadow .18s ease}
 .hero-button:hover{transform:translateY(-4px);box-shadow:0 28px 56px rgba(124,58,20,.32)}
 
 /* Mobile adjustments */
@@ -258,6 +258,10 @@ body.is-dashboard .legend-item { font-size: 10px; }
 
     box-shadow:
         0 15px 35px rgba(0,0,0,.3);
+}
+
+@media (max-width: 1024px) and (min-width: 701px) {
+  .hero-button { margin-top: 16vh; }
 }
 
 /* INTRO CLOSE */
