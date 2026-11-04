@@ -264,7 +264,7 @@ body.is-dashboard .legend-item { font-size: 10px; }
   .hero-button { margin-top: 15vh; }
   .brand-sub, .hero-subtitle { font-size: 16px; }
   .sponsor-strip { height: 80px; }
-  /* .thankyou-wrap { margin-top: 12vh; } */
+  .thankyou-wrap { margin-top: 30vh; }
 }
 
 /* INTRO CLOSE */
